@@ -1,0 +1,239 @@
+$primary: #64a19d;
+
+
+@import './node_modules/bootstrap/scss/bootstrap.scss';
+
+body {
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    letter-spacing: 0.0625em;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+
+// NAVBAR
+#mainNav .navbar-brand {
+    padding: 0.5rem 0;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#mainNav .nav-link {
+    transition: none;
+    padding: 2rem 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#mainNav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.btn {
+    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+    color: white !important;
+    padding: 1.25rem 2rem;
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    border: 0;
+}
+
+
+
+// HEADER
+header {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%);
+
+    &::before {
+        background-image: url('../../assets/img/bg-masthead.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+}
+
+.master-head h1 {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.8rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.master-head h2 {
+    max-width: 30rem;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+@media(max-width: 770px) {
+    .master-head h1 {
+        font-size: 5rem;
+    }
+    .master-head h2 {
+        font-size: 1rem;
+    }
+}
+@media(max-width: 660px) {
+    .master-head h1 {
+        font-size: 3.9rem;
+    }
+    .master-head h2 {
+        font-size: 1rem;
+        max-width: 20rem;
+    }
+}
+@media(max-width: 500px) {
+    .master-head h1 {
+        font-size: 3rem;
+    }
+    .master-head h2 {
+        font-size: 1rem;
+        max-width: 20rem;
+    }
+}
+@media(max-width: 400px) {
+    .master-head h1 {
+        font-size: 2.5rem;
+    }
+    .master-head h2 {
+        font-size: 1rem;
+        max-width: 20rem;
+    }
+}
+@media(max-width: 370px) {
+    .master-head h1 {
+        font-size: 2rem;
+    }
+    .master-head h2 {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+// ABOUT SECTION
+.about-section {
+    padding-top: 10rem;
+    background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.about-section p {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+// PROJECT SECTION
+.projects-section {
+    padding: 10rem 0;
+}
+
+.projects-section .featured-text {
+    padding: 2rem;
+}
+
+.projects-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #64a19d;
+}
+
+.projects-section .project-text {
+    padding: 5rem;
+    font-size: 90%;
+
+}
+
+
+// SIGN-UP
+.signup-section {
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%);
+    padding: 10rem 0;
+
+
+
+
+    &::before {
+        background-image: url('../../assets/img/bg-signup.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+    border: 1px solid white !important;
+    padding: 1.25rem 2rem;
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+// CONTACT SECTION
+.contact-section {
+    padding-top: 5rem;
+
+    & .card h4 {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+    }
+
+    & .card hr {
+        border-width: 0.25rem;
+        border-color: #64a19d;
+        width: 3rem;
+        opacity: 1;
+    }
+
+    & .social {
+        margin-top: 5rem;
+    }
+    & .card{
+        border: 0;
+        border-bottom: 0.25rem solid #64a19d;
+    }
+
+    & .social a {
+        text-align: center;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        line-height: 3rem;
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    & .social i:hover {
+        color: rgba(255, 255, 255, 0.2);
+
+    }
+}
+
+footer {
+
+    padding: 5rem 0;
+}
